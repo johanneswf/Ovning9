@@ -1,11 +1,13 @@
-const form = document.querySelector('#input');
+const inputlength = document.querySelector('#bblength');
+const inputbish = document.querySelector('#bbbish');
+const inputbosh = document.querySelector('#bbbosh');
 const divresult = document.querySelector('#result');
 const btn = document.querySelector('#btnBB');
 
 const BBrun = function () {
-  const length = form.elements[0].value;
-  const bish = form.elements[1].value;
-  const bosh = form.elements[2].value;
+  const length = inputlength.value;
+  const bish = inputbish.value;
+  const bosh = inputbosh.value;
   let result = '';
 
   for (let i = 1; i <= length; i++) {
