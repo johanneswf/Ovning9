@@ -1,3 +1,5 @@
+document.querySelector("#btnBB").addEventListener("click", BishBosh);
+
 function BishBosh() {
   let id = document.getElementById("input");
   let length = id.elements[0].value;
