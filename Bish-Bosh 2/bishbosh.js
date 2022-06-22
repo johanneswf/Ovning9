@@ -16,8 +16,8 @@ function BishBosh() {
 }
 
 function EvalBB(i, bish, bosh) {
-  if (i % bish === 0 && i % bosh === 0) return 'Bish-Bosh';
-  else if (i % bish === 0) return 'Bish';
-  else if (i % bosh === 0) return 'Bosh';
-  else return i;
+  return (i % bish === 0 && i % bosh === 0) ? 'Bish-Bosh'
+       : (i % bish === 0) ? 'Bish'
+       : (i % bosh === 0) ? 'Bosh'
+       : i;
 }
