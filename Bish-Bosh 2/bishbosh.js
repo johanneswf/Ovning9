@@ -1,4 +1,6 @@
-document.querySelector("#btnBB").addEventListener("click", BishBosh);
+document
+  .querySelector("#btnBB")
+  .addEventListener("click", BishBosh);
 
 function BishBosh() {
   let id = document.getElementById("input");
