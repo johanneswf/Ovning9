@@ -17,7 +17,7 @@ const BBrun = function () {
         : i
       ) + '</li>';
   }
-  result = '<br>' + result + '<br>';
+  result = '<ul class="list-group-item-secondary rounded pb-2 pt-2">' + result + '</ul>';
   divresult.innerHTML = result;
 }
 
