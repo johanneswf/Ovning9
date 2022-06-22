@@ -1,9 +1,11 @@
-const id = document.getElementById('input');
+const form = document.querySelector('#input');
+const divresult = document.querySelector('#result');
+const btn = document.querySelector('#btnBB');
 
 const BBrun = function () {
-  const length = id.elements[0].value;
-  const bish = id.elements[1].value;
-  const bosh = id.elements[2].value;
+  const length = form.elements[0].value;
+  const bish = form.elements[1].value;
+  const bosh = form.elements[2].value;
   let result = '';
 
   for (let i = 1; i <= length; i++) {
@@ -16,9 +18,7 @@ const BBrun = function () {
       ) + '</li>';
   }
   result = '<br>' + result + '<br>';
-  document.getElementById('result').innerHTML = result;
+  divresult.innerHTML = result;
 }
 
-document
-  .querySelector('#btnBB')
-  .addEventListener('click', BBrun);
+btn.addEventListener('click', BBrun);
