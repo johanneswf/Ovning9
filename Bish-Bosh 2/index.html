@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <title>Bish-Bosh 2.0</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>Bish-Bosh 2.0</h1>
+
+    <p>Bish-Bosh listar alla tal mellan 1 och (angedd Längd), med vissa undantag:</p>
+
+    <p>Om talet är jämnt delbart med (angedd Bish) listas ​‘Bish’ ​istället ​för talet. Om talet är jämnt delbart med (angedd 'Bosh') listas ‘​Bosh​’ ​istället ​för talet. Om talet är jämnt delbart med både med angedd Bish) och (angedd Bosh) skrivs “​Bish-Bosh​” ​istället ​för talet.</p>
+
+    <form id="input" action="#">
+
+      <div class="form-group row">
+        <label class="col">Längd</label>
+        <div class="col">
+          <input type="number" class="form-control" min="0" oninput="validity.valid||(value='');">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col">Bish</label>
+        <div class="col">
+          <input type="number" class="form-control" min="0">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col">Bosh</label>
+        <div class="col">
+          <input type="number" class="form-control" min="0">
+        </div>
+      </div>
+
+    </form>
+
+    <button class="btn btn-primary" onclick="BishBosh()">Bish-Bosh</button>
+
+    <div class="bg-dark bg-opacity-10 m-4 p-2" id="result"></div>
+
+    <footer class="m-5 text-center">© Johannes F 2022</footer>
+
+  </div>
+
+  <script src="bishbosh.js"></script>
+
+</body>
+
+</html>
