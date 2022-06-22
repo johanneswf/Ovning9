@@ -3,10 +3,10 @@ document
   .addEventListener("click", BishBosh);
 
 function BishBosh() {
-  let id = document.getElementById("input");
-  let length = id.elements[0].value;
-  let bish = id.elements[1].value;
-  let bosh = id.elements[2].value;
+  const id = document.getElementById("input");
+  const length = id.elements[0].value;
+  const bish = id.elements[1].value;
+  const bosh = id.elements[2].value;
   let result = "";
 
   for (let i = 1; i <= length; i++) {
