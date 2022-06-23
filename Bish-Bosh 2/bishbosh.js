@@ -20,7 +20,7 @@ const BBrun = function () {
   }
 
   divresult.innerHTML = result !== '' 
-    ? '<ul class="list-group-item-success rounded pb-2 pt-2">' + result + '</ul>'
+    ? '<ul class="list-group-item-primary rounded pb-2 pt-2">' + result + '</ul>'
     : '';
 }
 
