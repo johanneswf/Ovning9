@@ -29,7 +29,6 @@ const nonegs = function () {
 }
 
 
-document.querySelectorAll('input')
-  .forEach(input => input.addEventListener('input', nonegs, false))
+document.querySelectorAll('input').forEach(input => input.addEventListener('input', nonegs))
 
 btn.addEventListener('click', BBrun);
