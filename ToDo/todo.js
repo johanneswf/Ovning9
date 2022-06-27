@@ -2,7 +2,8 @@ const newitem = document.querySelector('#newitem');
 const btnadd = document.querySelector('#additem');
 const itemlist = document.querySelector('#itemlist');
 
-const itemAdd = function () {
+
+btnadd.addEventListener('click', () => {
   const btn = document.createElement('button');
   btn.id = 'removeitem';
   btn.className = 'btn btn-sm btn-danger float-end';
@@ -16,15 +17,9 @@ const itemAdd = function () {
 
   itemlist.appendChild(li);
   btn.addEventListener('click', e => e.target.parentNode.remove());
-}
+});
 
-const itemToggle = (e) => {
-  if (e.id === 'unstrike') e.id = 'strike';
-  else if (e.id === 'strike') e.id = 'unstrike';
-}
-
-
-
-btnadd.addEventListener('click', itemAdd);
-
-itemlist.addEventListener('click', e => itemToggle(e.target));
+itemlist.addEventListener('click', (e) => {
+  if (e.target.id === 'unstrike') e.target.id = 'strike';
+  else if (e.target.id === 'strike') e.target.id = 'unstrike';
+});
