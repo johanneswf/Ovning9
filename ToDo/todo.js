@@ -15,13 +15,10 @@ const itemAdd = function () {
   li.append(btn);
 
   itemlist.appendChild(li);
+  btn.addEventListener('click', e => e.target.parentNode.remove());
 }
 
-const itemRemove = function () {
-  console.log(this);
-}
-
-const itemToggle = function (e) {
+const itemToggle = (e) => {
   if (e.id === 'unstrike') e.id = 'strike';
   else if (e.id === 'strike') e.id = 'unstrike';
 }
