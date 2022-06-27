@@ -2,7 +2,6 @@ const newitem = document.querySelector('#newitem');
 const btnadd = document.querySelector('#additem');
 const itemlist = document.querySelector('#itemlist');
 const btnmark = document.querySelector('#markall');
-const btnunmark = document.querySelector('#unmarkall');
 
 
 btnadd.addEventListener('click', function () {
@@ -29,13 +28,14 @@ itemlist.addEventListener('click', function (e) {
 });
 
 btnmark.addEventListener('click', function () {
-  itemlist.querySelectorAll('li').forEach((li) => {
-    li.classList.add('strike');
-  })
-});
-
-btnunmark.addEventListener('click', function () {
-  itemlist.querySelectorAll('li').forEach((li) => {
-    li.classList.remove('strike');
-  })
+  if (btnmark.classList.contains('marked')) {
+    itemlist.querySelectorAll('li').forEach((li) => li.classList.remove('strike'));
+    btnmark.classList.remove('marked');
+  }
+  else {
+    itemlist.querySelectorAll('li').forEach((li) => {
+      li.classList.add('strike');
+    });
+    btnmark.classList.add('marked');
+  }
 });
