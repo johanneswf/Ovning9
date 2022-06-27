@@ -33,12 +33,12 @@ itemlist.addEventListener('click', function (e) {
 btnmark.addEventListener('click', function () {
   if (btnmark.classList.contains('marked')) {
     itemlist.querySelectorAll('li').forEach((li) => li.classList.remove('strike'));
-    btnmark.classList.remove('marked');
+    btnmark.className = 'btn btn-secondary';
     btnmark.innerText = 'Mark All';
   }
   else {
     itemlist.querySelectorAll('li').forEach((li) => li.classList.add('strike'));
-    btnmark.classList.add('marked');
+    btnmark.className = 'btn btn-outline-secondary marked';
     btnmark.innerText = 'Unmark All';
   }
 });
@@ -47,4 +47,4 @@ btnmark.addEventListener('click', function () {
 document.addEventListener('click', function () {
   if (itemlist.hasChildNodes()) divmark.classList.remove('hidden');
   else divmark.classList.add('hidden');
-})
+});
