@@ -1,9 +1,4 @@
-#strike {
+.strike {
   background-color: lightgray;
   text-decoration: line-through;
-}
-
-#unstrike {
-  background-color: white;
-  text-decoration: none;
 }

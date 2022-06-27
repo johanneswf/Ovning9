@@ -1,6 +1,7 @@
 const newitem = document.querySelector('#newitem');
 const btnadd = document.querySelector('#additem');
 const itemlist = document.querySelector('#itemlist');
+const btnmark = document.querySelector('#markall');
 
 
 btnadd.addEventListener('click', () => {
@@ -12,7 +13,6 @@ btnadd.addEventListener('click', () => {
   const li = document.createElement('li');
   li.className = 'list-group-item';
   li.innerText = newitem.value;
-  li.id = 'unstrike';
   li.append(btn);
 
   itemlist.appendChild(li);
@@ -20,6 +20,11 @@ btnadd.addEventListener('click', () => {
 });
 
 itemlist.addEventListener('click', (e) => {
-  if (e.target.id === 'unstrike') e.target.id = 'strike';
-  else if (e.target.id === 'strike') e.target.id = 'unstrike';
+  e.target.classList.toggle('strike');
+});
+
+btnmark.addEventListener('click', () => {
+  itemlist.querySelectorAll('li').forEach((li) => {
+    li.classList.toggle('strike');
+  })
 });
