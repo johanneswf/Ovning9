@@ -2,3 +2,7 @@
   background-color: lightgray;
   text-decoration: line-through;
 }
+
+.hidden {
+  display: none;
+}
