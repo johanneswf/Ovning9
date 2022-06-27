@@ -10,22 +10,21 @@
   <title>ToDo</title>
 </head>
 
-<body>
-  <div class="container pt-4 pb-4">
-    <div class="col">
-      <input id="newitem" type="text" class="form-control">
-    </div>
+<body class="text-bg-secondary">
+  <div class="container text-bg-light pt-4 pb-4 shadow rounded">
+    <input id="newitem" type="text" class="form-control">
     <div class="row">
-      <div class="col">
-        <button id="additem" class="btn btn-primary float-end">Add</button>
+      <div class="col"></div>
+      <div id="warning" class="col-sm-8 hidden text-danger text-opacity-75 text-end">Can't add empty items.</div>
+      <div class="col-sm-2">
+        <button id="additem" class="btn btn-primary float-end mt-2">Add</button>
       </div>
     </div>
-    <ul id="itemlist" class="list-group mt-4"></ul>
-    <div id="divmark" class="hidden text-end">
+    <ul id="itemlist" class="list-group mt-2"></ul>
+    <div id="divmark" class="hidden text-end mt-2">
       <button id="markall" class="btn btn-secondary">Mark All</button>
     </div>
   </div>
-  <div id="warning" class="fixed-bottom hidden alert alert-danger p-2 m-0" role="alert">Can't add empty items.</div>
 
   <script src="todo.js"></script>
 </body>
