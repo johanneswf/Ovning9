@@ -24,12 +24,12 @@ btnadd.addEventListener('click', () => {
 });
 
 itemlist.addEventListener('click', (e) => {
-  e.target.className = 'strike';
   e.target.classList.toggle('strike');
 });
 
 btnmark.addEventListener('click', () => {
   itemlist.querySelectorAll('li').forEach((li) => {
+    li.className.append = 'strike';
     li.classList.toggle('strike');
   })
 });
