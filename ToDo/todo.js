@@ -2,9 +2,9 @@ const newitem = document.querySelector('#newitem');
 const btnadd = document.querySelector('#additem');
 const itemlist = document.querySelector('#itemlist');
 const btnmark = document.querySelector('#markall');
-const divmark = document.querySelector('.divmark');
+const divmark = document.querySelector('#divmark');
 
-
+//Add items to list
 btnadd.addEventListener('click', function () {
   if (newitem.value !== '') {
     const btn = document.createElement('button');
@@ -24,21 +24,26 @@ btnadd.addEventListener('click', function () {
   }
 });
 
+//Mark/Unmark individual items
 itemlist.addEventListener('click', function (e) {
   e.target.classList.toggle('strike');
 });
 
+//Mark All/Unmark All button
 btnmark.addEventListener('click', function () {
   if (btnmark.classList.contains('marked')) {
     itemlist.querySelectorAll('li').forEach((li) => li.classList.remove('strike'));
     btnmark.classList.remove('marked');
+    btnmark.innerText = 'Mark All';
   }
   else {
     itemlist.querySelectorAll('li').forEach((li) => li.classList.add('strike'));
     btnmark.classList.add('marked');
+    btnmark.innerText = 'Unmark All';
   }
 });
 
+//Hides Mark All button until there are items in #itemlist
 document.addEventListener('click', function () {
   if (itemlist.hasChildNodes()) divmark.classList.remove('hidden');
   else divmark.classList.add('hidden');
