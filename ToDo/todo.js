@@ -20,7 +20,9 @@ const btnUnmarked = function () {
 }
 
 //Add items to list
-btnadd.addEventListener('click', function () {
+btnadd.addEventListener('click', function (e) {
+  e.preventDefault();
+
   if (newitem.value === '') {
     divwarning.classList.remove('hidden')
   }
@@ -30,7 +32,7 @@ btnadd.addEventListener('click', function () {
     const btn = document.createElement('button');
     btn.id = 'removeitem';
     btn.className = 'btn btn-sm btn-danger float-end';
-    btn.innerText = 'Remove';
+    btn.innerText = 'X';
 
     const li = document.createElement('li');
     li.className = 'list-group-item';

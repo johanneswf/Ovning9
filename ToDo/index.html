@@ -12,14 +12,18 @@
 
 <body class="text-bg-secondary">
   <div class="container text-bg-light pt-4 pb-4 shadow rounded">
-    <input id="newitem" type="text" class="form-control">
-    <div class="row">
-      <div class="col"></div>
-      <div id="warning" class="col-sm-8 hidden text-danger text-opacity-75 text-end">Can't add empty items.</div>
-      <div class="col-sm-2">
-        <button id="additem" class="btn btn-primary float-end mt-2">Add</button>
+    <form>
+      <div class="form-group">
+        <input id="newitem" type="text" class="form-control" autofocus>
+        <div class="row">
+          <div class="col"></div>
+          <div id="warning" class="col hidden text-danger text-opacity-75 text-end">Can't add empty items.</div>
+          <div class="col-sm-2">
+            <button id="additem" class="btn btn-primary text-end float-end mt-2">Add</button>
+          </div>
+        </div>
       </div>
-    </div>
+    </form>
     <ul id="itemlist" class="list-group mt-2"></ul>
     <div id="divmark" class="hidden text-end mt-2">
       <button id="markall" class="btn btn-secondary">Mark All</button>
